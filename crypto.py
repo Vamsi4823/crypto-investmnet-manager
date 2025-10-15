@@ -1,29 +1,3 @@
-# app.py
-"""
-Crypto Portfolio Investment Manager
-Streamlit app that:
-- Fetches crypto price data using yfinance
-- Stores data into a local SQLite DB
-- Computes basic metrics (min, max, mean, std)
-- Forms portfolios (equal-weight, risk-parity or custom)
-- Computes portfolio returns and risk
-- Runs parallelized risk checks (volatility, Sharpe, max drawdown, Sortino)
-- Sends email alerts when rules fail (Gmail app password via env var)
-- Runs stress tests (bull, bear, volatile)
-- Trains a simple linear regression on returns and reports MSE & R2
-
-How to run:
-1. Install requirements:
-   pip install yfinance pandas numpy scikit-learn streamlit matplotlib
-2. (Optional) Set environment variables for email alerts:
-   EMAIL_SENDER=ankemvamsikrishna@gmail.com
-   EMAIL_PASSWORD=<your_app_password>
-3. Run:
-   streamlit run app.py
-
-Note: Do NOT hardcode your email password in the file. Use environment variables or Streamlit secrets.
-"""
-
 import os
 import sqlite3
 import json
@@ -769,3 +743,4 @@ st.markdown(
 )
 
 st.success("App ready. Fetch data first (1) then build portfolio (2), run risk checks (3), and finally stress tests/predictions (4). Good luck, Vamsi! 🚀")
+
